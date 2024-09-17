@@ -8,11 +8,13 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ocpsvg-{{ version }}.tar.gz
   sha256: 8a089249b52b0bff99cca9698af3d74ef678ced2359316f8c2a04aee9baafb46
+  patches:
+    - 0001-Rename-dependencies-for-conda-forge-packages.patch
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -35,8 +37,10 @@ test:
     - ocpsvg
   commands:
     - pytest -v tests/
+    - pip check
   requires:
     - pytest
+    - pip
     # The libgl dependency for the test section can likely be removed when
     # the following https://github.com/conda-forge/ocp-feedstock/pull/50
     # gets merged in the ocp feedstock
