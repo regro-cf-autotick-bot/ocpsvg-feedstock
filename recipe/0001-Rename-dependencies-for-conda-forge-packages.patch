@@ -1,0 +1,28 @@
+From afb4096f386ef3f3e209280c7b14df6f6b42947a Mon Sep 17 00:00:00 2001
+From: Nicholas Devenish <ndevenish@gmail.com>
+Date: Tue, 17 Sep 2024 21:40:20 +0100
+Subject: [PATCH] Rename dependencies for conda-forge packages
+
+cadquery, ocp are split into separate feedstocks in conda-forge. By
+manually inspecting cadquery releases, 2.2.0 was the one released with
+ocp 7.7.0.
+---
+ pyproject.toml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/pyproject.toml b/pyproject.toml
+index 6143e49..1e83595 100755
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -5,7 +5,7 @@ readme = "readme-pypi.md"
+ version = "0.2.1"
+ requires-python = ">=3.9"
+ dependencies = [
+-    "cadquery-ocp >= 7.7.0",
++    "cadquery >=2.2.0",
+     "svgpathtools >= 1.5.1, <2",
+     "svgelements >= 1.9.1, <2",
+ ]
+-- 
+2.46.0
+
