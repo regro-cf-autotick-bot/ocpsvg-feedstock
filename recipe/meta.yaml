@@ -1,5 +1,5 @@
 {% set name = "ocpsvg" %}
-{% set version = "0.2.1" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ocpsvg-{{ version }}.tar.gz
-  sha256: 8a089249b52b0bff99cca9698af3d74ef678ced2359316f8c2a04aee9baafb46
+  sha256: 56a89983ac183cd026d903358617488f1ef0894855acfaae8832fd3805e1bacc
   patches:
     - 0001-Rename-dependencies-for-conda-forge-packages.patch
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
