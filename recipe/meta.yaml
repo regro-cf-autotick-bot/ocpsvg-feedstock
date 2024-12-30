@@ -14,17 +14,17 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools >=45
     - wheel
     - setuptools-scm >=6.2
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - cadquery
     - ocp >=7.7.0
     - svgpathtools >=1.5.1,<2
@@ -50,6 +50,7 @@ test:
     # this helps the user avoid to have a direct dependency on libgl
     # from this package (it will be transitive from OCP once the PR gets merged)
     - libgl    # [linux]
+    - python {{ python_min }}
 
 about:
   license: Apache-2.0
