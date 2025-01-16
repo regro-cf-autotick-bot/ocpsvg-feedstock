@@ -26,9 +26,7 @@ requirements:
   run:
     - python >=3.9
     - cadquery
-    - ocp >=7.7.0
-    - svgpathtools >=1.5.1,<2
-    - svgelements >=1.9.1,<2
+    - ocp >=7.7.0,<7.8
 
 test:
   source_files:
