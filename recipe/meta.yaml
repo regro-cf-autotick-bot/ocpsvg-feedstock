@@ -18,13 +18,13 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools >=45
     - wheel
     - setuptools-scm >=6.2
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - cadquery
     - ocp >=7.7.0,<7.8
 
@@ -39,6 +39,7 @@ test:
   requires:
     - pytest
     - pip
+    - python {{ python_min }}
     # The libgl dependency for the test section can likely be removed when
     # the following https://github.com/conda-forge/ocp-feedstock/pull/50
     # gets merged in the ocp feedstock
