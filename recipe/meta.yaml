@@ -49,6 +49,7 @@ test:
     # this helps the user avoid to have a direct dependency on libgl
     # from this package (it will be transitive from OCP once the PR gets merged)
     - libgl    # [linux]
+    - libegl    # [linux]
 
 about:
   license: Apache-2.0
@@ -57,7 +58,6 @@ about:
   summary: |
     Add SVG functionality (import and export) to higher level cadquery API
     - works at the OCP level
-    - uses svgpathtools to convert SVG path strings to and from TopoDS_Edge, TopoDS_Wire, and TopoDS_Face objects
     - uses svgelements to import TopoDS_Wire and TopoDS_Face objects from an SVG document
 
 
