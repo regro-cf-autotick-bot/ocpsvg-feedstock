@@ -1,6 +1,6 @@
-From dfd4943ca35bd98a34008d146d820b969a305dee Mon Sep 17 00:00:00 2001
+From f908129d209bb4f95c8d2bebf70772a217372269 Mon Sep 17 00:00:00 2001
 From: Nicholas Devenish <ndevenish@gmail.com>
-Date: Thu, 16 Jan 2025 12:49:06 +0000
+Date: Thu, 16 Jan 2025 15:26:10 +0000
 Subject: [PATCH] Change cadquery dependency to ocp dependency
 
 ---
@@ -8,16 +8,16 @@ Subject: [PATCH] Change cadquery dependency to ocp dependency
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/pyproject.toml b/pyproject.toml
-index 839d309..58d3420 100755
+index cf66360..04a991f 100755
 --- a/pyproject.toml
 +++ b/pyproject.toml
 @@ -5,8 +5,8 @@ readme = "readme-pypi.md"
- version = "0.3.4"
- requires-python = ">=3.9"
+ version = "0.4.0"
+ requires-python = ">=3.10"
  dependencies = [
--    "cadquery-ocp >= 7.7.0, <7.8",
+-    "cadquery-ocp >= 7.8.1, < 7.9.0",
 -    "svgelements >= 1.9.1, <2",
-+    "ocp >= 7.7.0, <7.8",
++    "ocp >= 7.8.1, <7.9.0",
 +    "svgelements >= 1.9.1,<2",
  ]
  
