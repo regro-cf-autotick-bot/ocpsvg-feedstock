@@ -1,5 +1,6 @@
 {% set name = "ocpsvg" %}
 {% set version = "0.4.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -24,7 +25,7 @@ requirements:
     - setuptools-scm >=6.2
     - pip
   run:
-    - ocp >=7.7.0,<7.8
+    - ocp >=7.8.1,<7.9
     - python >={{ python_min }}
     - svgelements >=1.9.1,<2
 
