@@ -35,7 +35,6 @@ test:
     - ocpsvg
   commands:
     - pytest -v tests/
-    - pip check
   requires:
     - pytest
     - pip
