@@ -24,8 +24,9 @@ requirements:
     - setuptools-scm >=6.2
     - pip
   run:
-    - python >={{ python_min }}
     - ocp >=7.7.0,<7.8
+    - python >={{ python_min }}
+    - svgelements >=1.9.1,<2
 
 test:
   source_files:
